@@ -10,7 +10,7 @@ Color backgroundColor3 = const Color(0xffB1B5BA);
 Color primaryTextColor = const Color(0xff263238);
 Color secondaryTextColor = const Color(0xff4F5254);
 Color inlineColor = const Color(0xff898C8D);
-Color transparentColor = Colors.transparent;
+Color titleColor = const Color(0xff000000);
 
 TextStyle primaryTextStyle = GoogleFonts.rubik(
   color: primaryTextColor,
@@ -28,6 +28,10 @@ TextStyle buttonTextStyle = GoogleFonts.rubik(
   color: buttonTextColor,
 );
 
+TextStyle titleTextStyle = GoogleFonts.rubik(
+  color: titleColor,
+);
+
 TextStyle alertTextStyle = GoogleFonts.poppins(
   color: alertColor,
 );
@@ -37,3 +41,5 @@ FontWeight regular = FontWeight.w400;
 FontWeight medium = FontWeight.w500;
 FontWeight semiBold = FontWeight.w600;
 FontWeight bold = FontWeight.w700;
+FontWeight extraBold = FontWeight.w800;
+FontWeight extraLight = FontWeight.w900;

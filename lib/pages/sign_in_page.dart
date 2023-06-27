@@ -254,7 +254,9 @@ class _SignInPageState extends State<SignInPage> {
           right: 43,
         ),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/home');
+          },
           style: TextButton.styleFrom(
             backgroundColor: secondaryColor,
             shape:
@@ -308,6 +310,7 @@ class _SignInPageState extends State<SignInPage> {
               imageLogin(),
               emailInput(),
               passwordInput(),
+              Spacer(),
               signInButton(),
               footer(),
             ],

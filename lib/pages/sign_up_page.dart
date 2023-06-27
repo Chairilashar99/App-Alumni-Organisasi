@@ -369,7 +369,9 @@ class _SignUpPageState extends State<SignUpPage> {
           right: 50,
         ),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/home');
+          },
           style: TextButton.styleFrom(
             backgroundColor: secondaryColor,
             shape:
@@ -400,6 +402,7 @@ class _SignUpPageState extends State<SignUpPage> {
               alamatInput(),
               pekerjaanInput(),
               tahunLulusInput(),
+              Spacer(),
               signUpButton(),
             ],
           ),
