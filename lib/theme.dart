@@ -11,6 +11,7 @@ Color primaryTextColor = const Color(0xff263238);
 Color secondaryTextColor = const Color(0xff4F5254);
 Color inlineColor = const Color(0xff898C8D);
 Color titleColor = const Color(0xff000000);
+Color titleColor2 = const Color(0xff002C6F);
 
 TextStyle primaryTextStyle = GoogleFonts.rubik(
   color: primaryTextColor,
@@ -30,6 +31,10 @@ TextStyle buttonTextStyle = GoogleFonts.rubik(
 
 TextStyle titleTextStyle = GoogleFonts.rubik(
   color: titleColor,
+);
+
+TextStyle titleStyle = GoogleFonts.poppins(
+  color: titleColor2,
 );
 
 TextStyle alertTextStyle = GoogleFonts.poppins(

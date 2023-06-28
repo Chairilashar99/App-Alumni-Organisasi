@@ -95,8 +95,45 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    //Widget Fitur Layanan Title
+    Widget fiturLayananTitle() {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.only(
+                  top: 17,
+                  left: 26,
+                ),
+                child: Image.asset('assets/icon_fitur.png'),
+                height: 12,
+              ),
+              SizedBox(
+                width: 4,
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 16),
+                child: Text(
+                  'Fitur & Layanan',
+                  style: titleStyle.copyWith(
+                    fontSize: 14,
+                    fontWeight: semiBold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      );
+    }
+
     return ListView(
-      children: [poster()],
+      children: [
+        poster(),
+        fiturLayananTitle(),
+      ],
     );
   }
 }
