@@ -68,6 +68,7 @@ flutter:
     - assets/icon_donasi.png
     - assets/icon_arrow.png
     - assets/icon_pengumuman.png
+    - assets/image_pengumuman.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

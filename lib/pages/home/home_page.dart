@@ -1,4 +1,5 @@
 import 'package:aplikasi_alumni_organisasi/theme.dart';
+import 'package:aplikasi_alumni_organisasi/widgets/pengumuman_card.dart';
 import 'package:flutter/material.dart';
 
 List<Map<String, String>> layananList = [
@@ -126,7 +127,7 @@ class HomePage extends StatelessWidget {
                   'Fitur & Layanan',
                   style: titleStyle.copyWith(
                     fontSize: 14,
-                    fontWeight: semiBold,
+                    fontWeight: medium,
                   ),
                 ),
               ),
@@ -329,6 +330,10 @@ class HomePage extends StatelessWidget {
                 ),
                 Text(
                   'Pengumuman',
+                  style: titleStyle.copyWith(
+                    fontSize: 14,
+                    fontWeight: medium,
+                  ),
                 ),
               ],
             ),
@@ -338,11 +343,45 @@ class HomePage extends StatelessWidget {
               top: 21,
               right: 26,
             ),
-            child: Text(
-              'Lihat semua',
+            child: TextButton(
+              onPressed: () {},
+              child: Text(
+                'Lihat semua',
+                style: titleSeeAllStyle.copyWith(
+                  fontSize: 13,
+                  fontWeight: medium,
+                ),
+              ),
             ),
           ),
         ],
+      );
+    }
+
+    //Widget Pengumuman
+    Widget pengumuman() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: 10,
+          left: 13,
+        ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              // SizedBox(
+              //   width: 8,
+              // ),
+              Row(
+                children: [
+                  PengumumanCard(),
+                  PengumumanCard(),
+                  PengumumanCard(),
+                ],
+              ),
+            ],
+          ),
+        ),
       );
     }
 
@@ -352,6 +391,7 @@ class HomePage extends StatelessWidget {
         fiturLayananTitle(),
         fiturLayanan(),
         pengumumanTitle(),
+        pengumuman(),
       ],
     );
   }
