@@ -1,4 +1,5 @@
 import 'package:aplikasi_alumni_organisasi/theme.dart';
+import 'package:aplikasi_alumni_organisasi/widgets/timeline_tile.dart';
 import 'package:flutter/material.dart';
 
 class TimelinePage extends StatelessWidget {
@@ -23,17 +24,21 @@ class TimelinePage extends StatelessWidget {
               'assets/icon_add.png',
             ),
           ),
-          label: Container(
-            margin: EdgeInsets.only(
+          label: Padding(
+            padding: EdgeInsets.only(
               left: 23,
             ),
             child: Text(
               'Tambah',
-              style: primaryTextStyle.copyWith(fontSize: 14, fontWeight: bold),
+              style: primaryTextStyle.copyWith(
+                fontSize: 14,
+                fontWeight: bold,
+              ),
+              overflow: TextOverflow.ellipsis,
             ),
           ),
           onPressed: () => {},
-          style: TextButton.styleFrom(
+          style: ElevatedButton.styleFrom(
             backgroundColor: backgroundColor2,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
@@ -43,9 +48,30 @@ class TimelinePage extends StatelessWidget {
       );
     }
 
+    //Widget Timeline
+    Widget timeline() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: 19,
+        ),
+        child: Column(
+          children: [
+            Column(
+              children: [
+                TimelineTile(),
+                TimelineTile(),
+                TimelineTile(),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
     return ListView(
       children: [
         buttonAdd(),
+        timeline(),
       ],
     );
   }

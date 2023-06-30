@@ -70,6 +70,11 @@ flutter:
     - assets/icon_pengumuman.png
     - assets/image_pengumuman.png
     - assets/icon_add.png
+    - assets/icon_profile_timeline.png
+    - assets/image_timeline.png
+    - assets/icon_like.png
+    - assets/icon_komentar.png
+    - assets/icon_share.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
