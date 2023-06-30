@@ -259,8 +259,9 @@ class _SignInPageState extends State<SignInPage> {
           },
           style: TextButton.styleFrom(
             backgroundColor: secondaryColor,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
           child: Text(
             'Masuk',
