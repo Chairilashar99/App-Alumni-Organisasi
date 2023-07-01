@@ -34,29 +34,34 @@ class TimelineTile extends StatelessWidget {
               SizedBox(
                 width: 14,
               ),
-              Container(
-                margin: EdgeInsets.only(top: 25),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'SMAN 3 Wajo',
-                      style: primaryTextStyle.copyWith(
-                        fontSize: 14,
-                        fontWeight: bold,
+              Expanded(
+                child: Container(
+                  margin: EdgeInsets.only(
+                    top: 25,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'SMAN 3 Wajo',
+                        style: primaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: bold,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    SizedBox(
-                      height: 3,
-                    ),
-                    Text(
-                      '32 menit lalu',
-                      style: primaryTextStyle.copyWith(
-                        fontSize: 10,
+                      SizedBox(
+                        height: 3,
                       ),
-                    ),
-                  ],
+                      Text(
+                        '32 menit lalu',
+                        style: primaryTextStyle.copyWith(
+                          fontSize: 10,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -84,7 +89,9 @@ class TimelineTile extends StatelessWidget {
               left: 32,
               right: 36,
             ),
-            child: Image.asset('assets/image_timeline.png'),
+            child: Image.asset(
+              'assets/image_timeline.png',
+            ),
           ),
           SizedBox(
             height: 9,
@@ -106,7 +113,7 @@ class TimelineTile extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset('assets/icon_like.png'),
-                  Expanded(
+                  FittedBox(
                     child: Container(
                       margin: EdgeInsets.only(top: 5),
                       child: Text(
@@ -119,19 +126,21 @@ class TimelineTile extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 49),
-                  Image.asset('assets/icon_komentar.png'),
-                  Container(
-                    margin: EdgeInsets.only(top: 5),
-                    child: Text(
-                      'Komentar',
-                      textAlign: TextAlign.center,
-                      style: primaryTextStyle.copyWith(
-                        fontSize: 10,
+                  Expanded(child: Image.asset('assets/icon_komentar.png')),
+                  FittedBox(
+                    child: Container(
+                      margin: EdgeInsets.only(top: 5),
+                      child: Text(
+                        'Komentar',
+                        textAlign: TextAlign.center,
+                        style: primaryTextStyle.copyWith(
+                          fontSize: 10,
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(width: 49),
-                  Image.asset('assets/icon_share.png'),
+                  Expanded(child: Image.asset('assets/icon_share.png')),
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.only(top: 5),

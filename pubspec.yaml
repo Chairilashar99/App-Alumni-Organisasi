@@ -75,6 +75,7 @@ flutter:
     - assets/icon_like.png
     - assets/icon_komentar.png
     - assets/icon_share.png
+    - assets/image_profil.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

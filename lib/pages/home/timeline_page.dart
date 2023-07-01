@@ -15,26 +15,30 @@ class TimelinePage extends StatelessWidget {
           left: 138,
           right: 138,
         ),
-        height: 40,
+        height: 34,
         child: ElevatedButton.icon(
           icon: Container(
             height: 20,
             margin: EdgeInsets.only(top: 7, bottom: 7),
-            child: Image.asset(
-              'assets/icon_add.png',
+            child: FittedBox(
+              child: Image.asset(
+                'assets/icon_add.png',
+              ),
             ),
           ),
           label: Padding(
             padding: EdgeInsets.only(
               left: 23,
             ),
-            child: Text(
-              'Tambah',
-              style: primaryTextStyle.copyWith(
-                fontSize: 14,
-                fontWeight: bold,
+            child: FittedBox(
+              child: Text(
+                'Tambah',
+                style: primaryTextStyle.copyWith(
+                  fontSize: 14,
+                  fontWeight: bold,
+                ),
+                // overflow: TextOverflow.ellipsis,
               ),
-              overflow: TextOverflow.ellipsis,
             ),
           ),
           onPressed: () => {},
@@ -58,8 +62,6 @@ class TimelinePage extends StatelessWidget {
           children: [
             Column(
               children: [
-                TimelineTile(),
-                TimelineTile(),
                 TimelineTile(),
               ],
             ),
